@@ -1,0 +1,96 @@
+{
+  "_id": "64bfd153f703ce3d1bea08e8",
+  "skillId": "64b568f853c4f2b9e2082add",
+  "developmentSkillId": "64b568f853c4f2b9e2082add",
+  "autoSave": false,
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<p>ola</p>"
+              }
+            ],
+            "selection_policy": "sequential",
+            "response_type": "text",
+            "id": "773ec011-7385-4d08-88f3-62b742cdb2d7"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "9a00bb48-fee5-41d2-be6a-d9694ea9c679",
+      "root": true,
+      "previous_sibling": null,
+      "digress_in": "does_not_return",
+      "digress_out": "allow_all",
+      "title": "teste1",
+      "key": "9a00bb48-fee5-41d2-be6a-d9694ea9c679",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "760a3443-7373-4805-af2c-3f71d53a2714"
+      },
+      "_id": "64c0222ed027f115402606a3"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<p><strong> top</strong></p>"
+              }
+            ],
+            "selection_policy": "sequential",
+            "response_type": "text",
+            "id": "6c6836a5-96b9-41e9-99ef-6f325885a6ca"
+          }
+        ]
+      },
+      "conditions": "<?input.text.toJson() == \"ola\"?>",
+      "dialog_node": "760a3443-7373-4805-af2c-3f71d53a2714",
+      "root": false,
+      "previous_sibling": null,
+      "digress_in": null,
+      "title": "Bloco filho",
+      "key": "760a3443-7373-4805-af2c-3f71d53a2714",
+      "_id": "64c02242d027f115402606a9",
+      "level": 1,
+      "parent": "9a00bb48-fee5-41d2-be6a-d9694ea9c679"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<p>não entendi</p>"
+              }
+            ],
+            "selection_policy": "sequential",
+            "response_type": "text",
+            "id": "5fafcb4e-adc6-4f78-898b-9d6f00f71055"
+          }
+        ]
+      },
+      "conditions": "true",
+      "dialog_node": "6503dbe2-493d-4343-a92e-a06e2d467997",
+      "root": false,
+      "previous_sibling": "760a3443-7373-4805-af2c-3f71d53a2714",
+      "digress_in": null,
+      "title": "Bloco",
+      "key": "6503dbe2-493d-4343-a92e-a06e2d467997",
+      "_id": "64c15583d027f115402623ad",
+      "level": 1,
+      "parent": "9a00bb48-fee5-41d2-be6a-d9694ea9c679"
+    }
+  ],
+  "createdAt": "2023-07-17T19:45:59.655Z",
+  "updatedAt": "2023-07-27T14:48:00.250Z",
+  "__v": 0
+}
